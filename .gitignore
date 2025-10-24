@@ -1,0 +1,40 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables
+.env.production
+.env.development
+.env.test
+.env.local
+
+# Build output
+dist/
+build/
+coverage/
+
+# VSCode settings
+.vscode/
+
+# MacOS system files
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
