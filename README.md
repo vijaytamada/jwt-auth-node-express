@@ -48,7 +48,8 @@ A Node.js and Express.js API implementing JSON Web Token (JWT) authentication to
     - `POST /api/auth/refresh-token` – Renew JWT using refresh token
 	- `POST /api/auth/forgot-password` - Sends a password reset email.
 	- `POST /api/auth/reset-password` - Resets new password using password reset email.
-    - `GET /api/protected` – Example protected route; requires Authorization header with your JWT
+    - 
+    - `GET /api/profile` – Example protected route; requires Authorization header with your JWT
 
     All endpoints can be quickly tested using the provided Postman collection in the root dir.    
    `jwt-auth-node-express\JWT-Auth.postman_collection.json`
