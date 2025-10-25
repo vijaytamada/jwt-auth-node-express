@@ -23,7 +23,7 @@ export const config = {
 
   // Resend email service config
   resendApiKey: process.env.RESEND_API_KEY,
-  emailFrom: process.env.EMAIL_FROM || "Dexnity <onboarding@resend.dev>",
+  emailFrom: process.env.EMAIL_FROM || "App <onboarding@resend.dev>",
 
   // General config
   frontendUrl: process.env.FRONTEND_URL || "http://localhost:3000",
