@@ -5,8 +5,9 @@ A Node.js and Express.js API implementing JSON Web Token (JWT) authentication to
 ## Features
 
 - User sign-up and login with secure password hashing
-- Implemented Refresh token and Access token mechanism
+- Implements Refresh token and Access token mechanism
 - Protected routes accessible only with valid JWT access tokens
+- Implements Forgot password & Reset password features
 - Modular route and middleware architecture for scalability
 - Error handling and response consistency
 
@@ -45,6 +46,8 @@ A Node.js and Express.js API implementing JSON Web Token (JWT) authentication to
     - `POST /api/auth/login` – Log in a user (returns JWT)
     - `POST /api/auth/logout` – Log out user (invalidates session or token as per logic)
     - `POST /api/auth/refresh-token` – Renew JWT using refresh token
+	- `POST /api/auth/forgot-password` - Sends a password reset email.
+	- `POST /api/auth/reset-password` - Resets new password using password reset email.
     - `GET /api/protected` – Example protected route; requires Authorization header with your JWT
 
     All endpoints can be quickly tested using the provided Postman collection in the root dir.    

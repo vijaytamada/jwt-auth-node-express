@@ -21,11 +21,13 @@
 					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"123456\",\n    \"firstName\": \"John\",\n    \"lastName\": \"Doe\"\n}"
 				},
 				"url": {
-					"raw": "{{base_url}}/signup",
+					"raw": "{{base_url}}/api/auth/signup",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"api",
+						"auth",
 						"signup"
 					]
 				}
@@ -44,14 +46,16 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"123456\"\n}"
+					"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"qwerty\"\n}"
 				},
 				"url": {
-					"raw": "{{base_url}}/login",
+					"raw": "{{base_url}}/api/auth/login",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"api",
+						"auth",
 						"login"
 					]
 				}
@@ -64,11 +68,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/profile",
+					"raw": "{{base_url}}/api/auth/profile",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"api",
+						"auth",
 						"profile"
 					]
 				}
@@ -81,11 +87,13 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/refresh-token",
+					"raw": "{{base_url}}/api/auth/refresh-token",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"api",
+						"auth",
 						"refresh-token"
 					]
 				}
@@ -98,12 +106,70 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/logout",
+					"raw": "{{base_url}}/api/auth/logout",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
+						"api",
+						"auth",
 						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/auth/forgot-password",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpamF5dGFtYWRhMDJAZ21haWwuY29tIiwiaWF0IjoxNzYxMzc1MDMzLCJleHAiOjE3NjEzNzU5MzN9.K42F_cgswe-ntYjQ389uYQZrwCJ1Ei4usuIajb6T7yE\",\r\n    \"newPassword\": \"qwerty123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/auth/reset-password",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"reset-password"
 					]
 				}
 			},
