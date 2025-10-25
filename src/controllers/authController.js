@@ -42,7 +42,7 @@ function profile(req, res) {
     res.json({ email, firstName: user.firstName, lastName: user.lastName });
 }
 
-// Verify aut
+// Verify auth
 function verifyAuth(req, res) {
     res.status(202).json({ authenticated: true });
 }
