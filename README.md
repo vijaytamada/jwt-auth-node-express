@@ -63,7 +63,7 @@ A Node.js and Express.js API implementing JSON Web Token (JWT) authentication to
     ├── package-lock.json
     ├── package.json
     └── src
-        ├─ app.js # 
+        ├─ app.js
         ├── config
         ├── controllers
         ├── middlewares
